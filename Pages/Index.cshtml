@@ -1,0 +1,26 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<form method="POST">
+    <label asp-for="Test.Something"></label>
+    <select asp-for="Test.Something">
+        <option value=""></option>
+        <option value="AAA">A value</option>
+    </select>
+    <span asp-validation-for="Test.Something" class="text-danger"></span>
+
+    <br />
+    <button type="submit">Submit</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
